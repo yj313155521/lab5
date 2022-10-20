@@ -1,3 +1,14 @@
+#' kolada_api
+#'
+#' kolada_api() is used for finding more information about certain city.
+#'
+#' @param path character
+#' @return a character string
+#' @example kolada_api("Lund")
+#' @import httr
+#' @import jsonlite
+#' @export
+
 kolada_api <- function(path){
   url <- paste0("https://api.kolada.se/v2/municipality?title=",path)
   resp <- httr::GET(url)
